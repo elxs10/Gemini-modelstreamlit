@@ -8,14 +8,13 @@ def initialize_session_state():
 
 # Main Streamlit app
 def text_page():
-    st.title("Gemini NexusCraft")
+    st.title("scnmone")
 
     # Initialize session state
     initialize_session_state()
 
     # Configure API key
-    api_key = st.sidebar.text_input("Enter your API key:", value=st.session_state.api_key)
-
+    api_key = "AIzaSyAhmX3uyVgyRc36DXy_mVmr3jhE-UbyxMk"
     # Check if the API key is provided
     if not api_key:
         st.sidebar.error("Please enter your API key.")
@@ -53,7 +52,7 @@ def text_page():
 
 
     gemini = genai.GenerativeModel(model_name="gemini-pro",
-                                  generation_config=generation_config,
+                                  
                                   safety_settings=safety_settings)
                 
 
